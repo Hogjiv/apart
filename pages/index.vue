@@ -193,7 +193,7 @@ onUnmounted(() => {
 
   &:hover {
     background: #aaaaaa;
-    background-color: #b8860b;
+    background-color: #aaaaaa;
   }
 
   &:active {
@@ -321,7 +321,7 @@ onUnmounted(() => {
   }
 
   th:hover {
-    background-color: #b8860b;
+    background-color: #d6d6d6;
     color: white;
   }
 
