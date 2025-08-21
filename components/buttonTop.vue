@@ -28,19 +28,32 @@ onUnmounted(() => {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  padding: 12px 18px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 150px;
+  height: 40px;
+  padding: 0 12px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   background: #3EB57C;
   color: #fff;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.3s;
   z-index: 999;
+  border: none;
 }
+
+.scroll-top:focus {
+  outline: none;
+}
+
 .scroll-top:hover {
-  background: #2e8b57;
+  background: #aaaaaa;
 }
+
 .scroll-top:active {
   transform: scale(0.9);
 }

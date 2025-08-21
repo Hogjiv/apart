@@ -9,7 +9,8 @@ import ArrowDown from "@/assets/icons/arrow-down.svg"
 
 const store = useStore()
 const showMobileFilters = ref(false)
-const windowWidth = ref(0)  
+const windowWidth = ref(0)
+
 
 function handleResize() {
   windowWidth.value = window.innerWidth
@@ -34,7 +35,6 @@ onUnmounted(() => {
   <div class="wrap">
     <h1 class="page-title">Квартиры</h1>
 
-    <!-- Кнопка для открытия фильтров на мобильных устройствах -->
     <button class="mobile-filter-btn" @click="showMobileFilters = !showMobileFilters">
       {{ showMobileFilters ? 'Закрыть фильтры' : 'Фильтры' }}
     </button>
@@ -97,33 +97,24 @@ onUnmounted(() => {
 
               <apartmentsRow v-for="apt in store.visibleApartments" :key="apt.name" :apartment="apt" />
 
-              <tr v-if="store.visibleCount < store.filteredApartments.length && !store.loading">
-                <td colspan="5" class="show-more-row">
-                  <button @click="store.showMore" class="show-more-btn">
-                    Показать ещё 20
-                  </button>
-                </td>
-              </tr>
             </tbody>
           </table>
+
+          <div v-if="store.visibleApartments.length < store.filteredApartments.length" class="show-more">
+            <button @click="store.showMore">Показать ещё</button>
+          </div>
         </div>
+
       </section>
 
-      <!-- Фильтры -->
-      <section
-        class="parametric-filters"
-        :class="{ 'mobile-open': showMobileFilters && windowWidth <= 670 }"
-        v-show="showMobileFilters || windowWidth > 670"
-      >
+      <section class="parametric-filters" :class="{ 'mobile-open': showMobileFilters && windowWidth <= 670 }"
+        v-show="showMobileFilters || windowWidth > 670">
         <Filter />
-        <button
-          v-if="windowWidth <= 670"
-          class="show-filters-btn"
-          @click="applyFilters"
-        >
+        <button v-if="windowWidth <= 670" class="show-filters-btn" @click="applyFilters">
           Применить
         </button>
       </section>
+
     </main>
 
     <buttonTop />
@@ -131,18 +122,62 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="scss">
+.show-more {
+  text-align: center;
+}
+
+.show-more button {
+
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background: #3EB57C;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+  outline: none;
+  border: none;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  ;
+
+  &:hover {
+    background: #aaaaaa;
+    color: #fff;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:focus {
+
+    outline: none;
+  }
+
+}
+
+
+.show-more button:hover {
+  background: #aaaaaa;
+  z-index: 99999;
+}
+
+
 .parametric-filters.mobile-open {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 1000;
-  overflow-y: auto;
   background-color: #e0f2e4;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  display: block;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .show-filters-btn {
@@ -157,7 +192,8 @@ onUnmounted(() => {
   transition: 0.2s;
 
   &:hover {
-    background: #349966;
+    background: #aaaaaa;
+    background-color: #b8860b;
   }
 
   &:active {
@@ -183,7 +219,7 @@ onUnmounted(() => {
   display: none;
   margin-bottom: 10px;
   padding: 10px 15px;
-  background-color: #b8860b;
+  background-color: #3eb57c;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -192,7 +228,7 @@ onUnmounted(() => {
   font-size: clamp(14px, 3vw, 16px);
 
   &:hover {
-    background: #a07a0c;
+    background: #aaaaaa;
   }
 
   &:active {
@@ -320,9 +356,8 @@ onUnmounted(() => {
 .parametric-filters {
   flex: 0 0 400px;
   height: 400px;
-  overflow-y: auto;
   background-color: #e0f2e4;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
 
   &.disabled {
@@ -338,11 +373,30 @@ onUnmounted(() => {
   }
 
   .apartment-table .table {
-    .col-plan { width: 16%; min-width: 70px; }
-    .col-name { width: 32%; min-width: 100px; }
-    .col-area { width: 14%; min-width: 60px; }
-    .col-floor { width: 12%; min-width: 50px; }
-    .col-price { width: 26%; min-width: 90px; }
+    .col-plan {
+      width: 16%;
+      min-width: 70px;
+    }
+
+    .col-name {
+      width: 32%;
+      min-width: 100px;
+    }
+
+    .col-area {
+      width: 14%;
+      min-width: 60px;
+    }
+
+    .col-floor {
+      width: 12%;
+      min-width: 50px;
+    }
+
+    .col-price {
+      width: 26%;
+      min-width: 90px;
+    }
   }
 
   .apartment-table th,
@@ -359,11 +413,30 @@ onUnmounted(() => {
   }
 
   .apartment-table .table {
-    .col-plan { width: 15%; min-width: 65px; }
-    .col-name { width: 33%; min-width: 90px; }
-    .col-area { width: 16%; min-width: 55px; }
-    .col-floor { width: 12%; min-width: 45px; }
-    .col-price { width: 24%; min-width: 85px; }
+    .col-plan {
+      width: 15%;
+      min-width: 65px;
+    }
+
+    .col-name {
+      width: 33%;
+      min-width: 90px;
+    }
+
+    .col-area {
+      width: 16%;
+      min-width: 55px;
+    }
+
+    .col-floor {
+      width: 12%;
+      min-width: 45px;
+    }
+
+    .col-price {
+      width: 24%;
+      min-width: 85px;
+    }
   }
 }
 
@@ -374,11 +447,30 @@ onUnmounted(() => {
   }
 
   .apartment-table .table {
-    .col-plan { width: 14%; min-width: 60px; }
-    .col-name { width: 34%; min-width: 80px; }
-    .col-area { width: 16%; min-width: 50px; }
-    .col-floor { width: 12%; min-width: 40px; }
-    .col-price { width: 24%; min-width: 80px; }
+    .col-plan {
+      width: 14%;
+      min-width: 60px;
+    }
+
+    .col-name {
+      width: 34%;
+      min-width: 80px;
+    }
+
+    .col-area {
+      width: 16%;
+      min-width: 50px;
+    }
+
+    .col-floor {
+      width: 12%;
+      min-width: 40px;
+    }
+
+    .col-price {
+      width: 24%;
+      min-width: 80px;
+    }
   }
 
   .apartment-table th,
@@ -400,14 +492,29 @@ onUnmounted(() => {
     max-width: 100%;
 
     .table {
-      .col-plan { width: 20%; }
-      .col-name { width: 30%; }
-      .col-area { width: 18%; }
-      .col-floor { width: 12%; }
-      .col-price { width: 20%; }
+      .col-plan {
+        width: 20%;
+      }
+
+      .col-name {
+        width: 30%;
+      }
+
+      .col-area {
+        width: 18%;
+      }
+
+      .col-floor {
+        width: 12%;
+      }
+
+      .col-price {
+        width: 20%;
+      }
     }
 
-    th, td {
+    th,
+    td {
       padding: 8px 3px;
       font-size: clamp(9px, 3vw, 12px);
     }
@@ -418,17 +525,7 @@ onUnmounted(() => {
     }
   }
 
-  .parametric-filters {
-    display: none;
-    flex: none;
-    width: 100%;
-    height: 100%;
-    max-height: none;
 
-    &[v-show="true"] {
-      display: block;
-    }
-  }
 
   .mobile-filter-btn {
     display: block;
@@ -441,17 +538,31 @@ onUnmounted(() => {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .wrap {
     padding: 5px;
   }
 
   .apartment-table .table {
-    .col-plan { width: 18%; }
-    .col-name { width: 28%; }
-    .col-area { width: 18%; }
-    .col-floor { width: 14%; }
-    .col-price { width: 22%; }
+    .col-plan {
+      width: 18%;
+    }
+
+    .col-name {
+      width: 28%;
+    }
+
+    .col-area {
+      width: 18%;
+    }
+
+    .col-floor {
+      width: 14%;
+    }
+
+    .col-price {
+      width: 22%;
+    }
   }
 
   .apartment-table th,

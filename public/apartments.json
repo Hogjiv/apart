@@ -13,7 +13,7 @@
     "square": 55,
     "price": 6000000,
     "rooms": 2,
-     "img": "/2-room-apt.png"
+    "img": "/2-room-apt.png"
   },
   {
     "name": "1-комнатная квартира номер 103",
@@ -125,7 +125,7 @@
     "square": 82,
     "price": 9200000,
     "rooms": 3,
-      "img": "/3-room-apt.png"
+    "img": "/3-room-apt.png"
   },
   {
     "name": "1-комнатная квартира номер 117",
@@ -158,5 +158,325 @@
     "price": 13500000,
     "rooms": 4,
     "img": "4-room-apt.jpg"
+  },
+  {
+    "name": "1-комнатная квартира номер 121",
+    "floors": 2,
+    "square": 37,
+    "price": 4300000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 122",
+    "floors": 4,
+    "square": 56,
+    "price": 6050000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 123",
+    "floors": 6,
+    "square": 83,
+    "price": 9400000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+  {
+    "name": "4-комнатная квартира номер 124",
+    "floors": 9,
+    "square": 115,
+    "price": 12800000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
+  },
+  {
+    "name": "1-комнатная квартира номер 125",
+    "floors": 1,
+    "square": 34,
+    "price": 3950000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 126",
+    "floors": 5,
+    "square": 62,
+    "price": 6750000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 127",
+    "floors": 7,
+    "square": 90,
+    "price": 9800000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+  {
+    "name": "4-комнатная квартира номер 128",
+    "floors": 8,
+    "square": 118,
+    "price": 13300000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
+  },
+  {
+    "name": "1-комнатная квартира номер 129",
+    "floors": 3,
+    "square": 39,
+    "price": 4450000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 130",
+    "floors": 2,
+    "square": 54,
+    "price": 5900000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 131",
+    "floors": 4,
+    "square": 76,
+    "price": 8600000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+  {
+    "name": "4-комнатная квартира номер 132",
+    "floors": 10,
+    "square": 123,
+    "price": 13800000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
+  },
+  {
+    "name": "1-комнатная квартира номер 133",
+    "floors": 5,
+    "square": 36,
+    "price": 4050000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 134",
+    "floors": 6,
+    "square": 60,
+    "price": 6600000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 135",
+    "floors": 8,
+    "square": 87,
+    "price": 9650000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+  {
+    "name": "4-комнатная квартира номер 136",
+    "floors": 9,
+    "square": 119,
+    "price": 13200000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
+  },
+  {
+    "name": "1-комнатная квартира номер 137",
+    "floors": 2,
+    "square": 38,
+    "price": 4250000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 138",
+    "floors": 3,
+    "square": 58,
+    "price": 6250000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 139",
+    "floors": 7,
+    "square": 81,
+    "price": 9050000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+  {
+    "name": "4-комнатная квартира номер 140",
+    "floors": 11,
+    "square": 130,
+    "price": 14500000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
+  },
+  {
+    "name": "1-комнатная квартира номер 141",
+    "floors": 1,
+    "square": 33,
+    "price": 3850000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 142",
+    "floors": 5,
+    "square": 63,
+    "price": 6800000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 143",
+    "floors": 6,
+    "square": 84,
+    "price": 9450000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+  {
+    "name": "4-комнатная квартира номер 144",
+    "floors": 8,
+    "square": 117,
+    "price": 13100000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
+  },
+  {
+    "name": "1-комнатная квартира номер 145",
+    "floors": 2,
+    "square": 37,
+    "price": 4350000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 146",
+    "floors": 3,
+    "square": 55,
+    "price": 6000000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 147",
+    "floors": 7,
+    "square": 89,
+    "price": 9750000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+  {
+    "name": "4-комнатная квартира номер 148",
+    "floors": 9,
+    "square": 121,
+    "price": 13600000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
+  },
+   {
+    "name": "1-комнатная квартира номер 149",
+    "floors": 4,
+    "square": 40,
+    "price": 4550000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 150",
+    "floors": 6,
+    "square": 59,
+    "price": 6450000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 151",
+    "floors": 5,
+    "square": 80,
+    "price": 9100000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+  {
+    "name": "4-комнатная квартира номер 152",
+    "floors": 10,
+    "square": 126,
+    "price": 13900000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
+  },
+  {
+    "name": "1-комнатная квартира номер 153",
+    "floors": 3,
+    "square": 35,
+    "price": 4050000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 154",
+    "floors": 2,
+    "square": 53,
+    "price": 5800000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 155",
+    "floors": 8,
+    "square": 86,
+    "price": 9600000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+  {
+    "name": "4-комнатная квартира номер 156",
+    "floors": 11,
+    "square": 128,
+    "price": 14200000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
+  },
+  {
+    "name": "1-комнатная квартира номер 157",
+    "floors": 1,
+    "square": 32,
+    "price": 3750000,
+    "rooms": 1,
+    "img": "/1-room-apt.png"
+  },
+  {
+    "name": "2-комнатная квартира номер 158",
+    "floors": 5,
+    "square": 61,
+    "price": 6650000,
+    "rooms": 2,
+    "img": "/2-room-apt.png"
+  },
+  {
+    "name": "3-комнатная квартира номер 159",
+    "floors": 7,
+    "square": 82,
+    "price": 9250000,
+    "rooms": 3,
+    "img": "/3-room-apt.png"
+  },
+    {
+    "name": "4-комнатная квартира номер 160",
+    "floors": 12,
+    "square": 135,
+    "price": 15000000,
+    "rooms": 4,
+    "img": "/4-room-apt.jpg"
   }
 ]

@@ -27,17 +27,17 @@ const props = defineProps<{
       <span class="price-value">{{ apartment.price.toLocaleString() }}&nbsp;₽</span>
     </td>
   </tr>
-</template>
+</template> 
 
 <style scoped lang="scss">
 .apartment-row {
   border-bottom: 1px solid #e0e0e0;
   transition: background-color 0.2s ease;
-  
+
   &:hover {
     background-color: #f8f9fa;
   }
-  
+
   td {
     vertical-align: middle;
     padding: 12px 8px;
@@ -46,7 +46,7 @@ const props = defineProps<{
 
 .plan-cell {
   text-align: center;
-  
+
   .img-container {
     width: 100%;
     height: 80px;
@@ -58,7 +58,7 @@ const props = defineProps<{
     background-color: #f8f9fa;
     margin: 4px 0;
   }
-  
+
   .plan-img {
     max-width: 100%;
     max-height: 100%;
@@ -77,19 +77,28 @@ const props = defineProps<{
     word-break: break-word;
     display: block;
     padding: 4px 0;
-    font-size: 16px; // Базовый размер для больших экранов
+    font-size: 16px;
   }
 }
 
-.area-cell, .floor-cell, .price-cell {
-  .area-value, .floor-value, .price-value {
+.area-cell,
+.floor-cell,
+.price-cell {
+
+  .area-value,
+  .floor-value,
+  .price-value {
     font-weight: 500;
     color: #444;
     display: block;
     padding: 4px 0;
     line-height: 1.3;
-    font-size: 16px; // Единый размер для всех значений
+    font-size: 12px;
   }
+}
+
+.apartment-row:last-child {
+  border-bottom: none;
 }
 
 .price-cell {
@@ -99,91 +108,92 @@ const props = defineProps<{
   }
 }
 
-// Средние экраны (планшеты)
 @media (max-width: 960px) {
   .apartment-row td {
     padding: 14px 6px;
   }
-  
+
   .plan-cell {
     .img-container {
       height: 90px;
       margin: 6px 0;
     }
   }
-  
-  // Единый размер шрифта 14px для всех элементов
+
   .name-cell .apartment-name {
     font-size: 14px;
     padding: 6px 0;
   }
-  
-  .area-value, .floor-value, .price-value {
+
+  .area-value,
+  .floor-value,
+  .price-value {
     font-size: 14px;
     padding: 6px 0;
   }
 }
 
-// Мобильные экраны
 @media (max-width: 480px) {
   .apartment-row td {
     padding: 16px 3px;
     vertical-align: top;
   }
-  
+
   .plan-cell {
     .img-container {
       height: 100px;
       border-radius: 6px;
       margin: 8px 0;
     }
-    
+
     .plan-img {
       border-radius: 6px;
     }
   }
-  
-  // Единый размер шрифта 12px для всех элементов
+
   .name-cell .apartment-name {
     font-size: 12px;
     line-height: 1.3;
     padding: 8px 0;
     font-weight: 600;
   }
-  
-  .area-value, .floor-value, .price-value {
+
+  .area-value,
+  .floor-value,
+  .price-value {
     font-size: 12px;
     padding: 8px 0;
     font-weight: 500;
   }
-  
+
   .price-value {
-    font-weight: 700; // Цена остается жирнее, но того же размера
+    font-weight: 700;
   }
 }
 
-// Очень маленькие экраны
 @media (max-width: 360px) {
   .apartment-row td {
     padding: 14px 2px;
   }
-  
+
   .plan-cell {
     .img-container {
       height: 80px;
       margin: 6px 0;
     }
   }
-  
-  // Единый размер шрифта 10px для всех элементов
+
   .name-cell .apartment-name {
     font-size: 10px;
     line-height: 1.2;
     padding: 6px 0;
   }
-  
-  .area-value, .floor-value, .price-value {
+
+  .area-value,
+  .floor-value,
+  .price-value {
     font-size: 10px;
     padding: 6px 0;
   }
-}</style>
+}
+</style>
